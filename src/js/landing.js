@@ -1,144 +1,94 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
-
-// Files
-import '../css/landing.css'; // Import the CSS file
 import TypewriterEffect from '../js/typewriter';
 import BubblyButton from '../js/BubblyButton.js';
-import TestimonialSlider from './testimonial.js';
-import CommunitySection from './communities.js';
-import PictureCarousel from './PictureCarousel.js';
-
-// Images
-import hero1 from '../img/hero1.svg';
-import hero2 from '../img/hero2.svg';
-import hero3 from '../img/hero3.svg';
-import maleuser from '../img/maleuser.png';
-import comment from '../img/speechbubble.svg';
-import heart from '../img/heart.svg';
-import f1 from '../img/feature_1.svg';
-import f2 from '../img/feature_2.svg';
-import f3 from '../img/feature_3.svg';
-
-const images = [hero1, hero2, hero3];
-
+import { Link } from 'react-router-dom';
+import main  from '../img/main.png';
+import  '../css/landing.css';
+import logo1 from "../img/logo1.png";
+import logo2 from "../img/logo2.png";
+import logo3 from "../img/logo3.png";
+import logo4 from "../img/logo4.png";
 function Landing() {
-  return (
-    <div className="container">
-      <section className="section-pink">
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="typewriter">
-              <TypewriterEffect text="Safe communities to make friends, find support, and express yourself, where cyber bullying doesn't exist." />
-            </h1>
-            <p className="feature-content-p">Join our online groups and connect with quality members who have pledged to make a safe, healthy environment for everyone</p>
-            <Link to="/invite">
-              <div className="button-container">
-                <BubblyButton />
-              </div>
-            </Link>
+   return (
+    <div className="container-new">
+
+      <div className="hero-content-new">
+         <div className="hero-text-new">
+           <h1 className="typewriter-new">
+            <TypewriterEffect text="Welcome to InPower:" />
+          </h1>
+          <p className="feature-content-p-new">Your Online Community for Healing and Empowerment</p>
+          <Link to="/invite">
+            <div className="button-container-new">
+               <BubblyButton />
+             </div>
+           </Link>
+         </div>
+         <div>
+           <img src={main} alt="Main Image" className="hero-img-new" />
+         </div>
+       </div>
+       <div className='summary'>
+        <h2>At InPower, we believe in the transformative power of connection, healing, and empowerment. Our platform provides a safe and inclusive space exclusively designed for women and nonbinary individuals to come together, support each other, and thrive.</h2>
+      
+      </div>
+
+      <div className='features'>
+        <h2>What We Offer:</h2> 
+
+        <div class="grid-container">
+
+          <div class="grid-item">
+
+         
+          <div class="content">
+          <img src={logo1} alt="logo 1" className="circle-img" />
+          <h3>Community Support</h3>
+          Connect with like-minded individuals who understand and support you on your journey. Share your experiences, stories, and struggles in a supportive and nonjudgmental environment.
           </div>
-          <div>
-            <PictureCarousel images={images} />
+         </div>
+          <div class="grid-item">
+    
+          <div class="content">
+          <img src={logo2} alt="logo 2" className="circle-img" />
+          <h3>Personal Growth Resources</h3>
+           Access a wealth of resources, including articles, podcasts, workshops, and expert advice, to help you on your path to personal growth and healing. Learn practical strategies for overcoming challenges and developing a stronger sense of self
           </div>
+         </div>
+          <div class="grid-item">
+    
+          <div class="content">
+          <img src={logo3} alt="logo 3" className="circle-img" />
+          <h3>Mental Health Support</h3>
+          Take advantage of our mental health resources and tools designed to support your emotional well-being. From guided meditations to online counselling services, we're here to help you navigate life's ups and downs with resilience and strength.
+          </div>
+          </div>
+         <div class="grid-item">
+  
+         <div class="content">
+          <img src={logo4} alt="logo 4" className="circle-img" />
+          <h3>Exclusive Member Perks</h3>
+         Enjoy special discounts, freebies, and exclusive offers from our partners and sponsors with the InPower membership card. Treat yourself to self-care products, wellness services, and more, all while supporting your fellow InPower members.
+          </div>
+  </div>
+</div>
+
+        
         </div>
-      </section>
-      <section className="section">
-        <CommunitySection />
-        <h2 className="comtext">View our Community Questions</h2>
-        <div className="grid-container">
-          <div className="grid-item">
-            <div className="flex-container">
-              <h3>Mommy Meet And Greet!</h3>
-              <p>Hey guys! Got my blood drawn for NIPPT on Monday. They told me 7-10 days.</p>
-              <div className="user-info">
-                <img src={maleuser} alt="User" className="user-image" />
-                <div className="comment-like-info">
-                  <img src={comment} alt="comment" className="commentlike-image" />
-                  <span className="count">12</span>
-                  <img src={heart} alt="like" className="commentlike-image" />
-                  <span className="count">42</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="grid-item">
-            <div className="flex-container">
-              <h3>Test Content</h3>
-              <p>Hey guys! Got my blood drawn for NIPPT on Monday. They told me 7-10 days.</p>
-              <div className="user-info">
-                <img src={maleuser} alt="User" className="user-image" />
-                <div className="comment-like-info">
-                  <img src={comment} alt="comment" className="commentlike-image" />
-                  <span className="count">12</span>
-                  <img src={heart} alt="like" className="commentlike-image" />
-                  <span className="count">42</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="grid-item">
-            <div className="flex-container">
-              <h3>Test Content</h3>
-              <p>Hey guys! Got my blood drawn for NIPPT on Monday. They told me 7-10 days.</p>
-              <div className="user-info">
-                <img src={maleuser} alt="User" className="user-image" />
-                <div className="comment-like-info">
-                  <img src={comment} alt="comment" className="commentlike-image" />
-                  <span className="count">12</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section-pink center-content">
-        <div>
-          <h2 className="feature-content-h1">
-            <TypewriterEffect text={"InPower is a safe space that's free of judgement and social prejudice. A space where healthy communication is a reality, and kindness is prioritized above all else. So where do we begin?"} />
-          </h2>
-        </div>
-      </section>
-      <section className="section">
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="feature-content-h1">
-              Educational <br/> Modules
-            </h1>
-            <p className="feature-content-p">We honour those who’ve put infinite hours in emotional labour to spread awareness to the world on important topics, so we’ve teamed up with researchers, psychologists, and activists to educate members before joining specific groups.</p>
-          </div>
-          <div>
-            <img src= {f1} alt= 'feature 1 image educational modules'className='hero-img'/>
-          </div>
-        </div>  
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="feature-content-h1">
-              Integrity <br/> Badges
-            </h1>
-            < p className="feature-content-p">Fundamentally, we had to rethink social interactions. Understanding cause and effect, and its impact on behaviour. We’ve gone back to the basics of healthy social skills and created badges that members need to acquire before joining groups. We believe it’s the foundational practice of maintaining a safe platform.</p>
-          </div>
-          <div>
-            <img src= {f2} alt= 'feature 2 image educational modules'className='hero-img'/>
-          </div>
-        </div>
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="feature-content-h1">
-              Privacy & <br/> Protection
-            </h1>
-            <p className="feature-content-p">Confide in us. Post anonymously and feel secure knowing that screenshots and screenrecordings are disabled for your protection. And because we care about the authenticity of our members, we have a three-step verification process, so that you always know you’re connecting with someone real.</p>
-          </div>
-          <div>
-            <img src= {f3} alt= 'feature 3 image educational modules'className='hero-img' />
-          </div>
-        </div>
-      </section>
-      <section>
-        <TestimonialSlider />
-      </section>
+        <div className='summary-text'>
+        <h1>Join the InPower Community Today!</h1>
+        <h3>Ready to embark on your journey of healing and empowerment? Join the InPower community today and connect with a supportive network of women and nonbinary individuals who are committed to empowering each other and creating positive change. Together, we can overcome obstacles, embrace our strengths, and live our lives to the fullest. Join InPower and unleash your true potential today!</h3>
+        <Link to="/invite">
+  <div className="button-invite">
+    <button className="button-form">Apply For Invite Code</button>
+  </div>
+</Link>
+      </div>
+       
     </div>
-  );
-}
+    
+   );
+ }
 
 export default Landing;
