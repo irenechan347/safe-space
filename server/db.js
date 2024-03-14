@@ -2,7 +2,8 @@
  const sql = require('mssql');
 
 const config = {
-  server: 'inpower.database.windows.net', 
+  //server: 'inpower.database.windows.net', 
+  server: 'inpowerdatabase.database.windows.net',
   database: 'InPowerDatabase',
   user: 'inpoweradmin',
   password: 'Qwer1234',
